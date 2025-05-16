@@ -1,8 +1,9 @@
 from selenium.webdriver.common.by import By
 
 class LoginPageLocators:
-    EMAIL_INPUT = (By.XPATH, "//fieldset[1]/div/div/input")  # Поле ввода "Email" на странице входа
-    PASSWORD_INPUT = (By.XPATH, "//fieldset[2]/div/div/input")  # Поле ввода "Пароль" на странице входа
-    LOGIN_BUTTON = (By.XPATH, "//button[text()='Войти']")  # Кнопка "Войти" на странице входа
-    REGISTER_LINK = (By.XPATH, "//a[text()='Зарегистрироваться']")  # Ссылка "Зарегистрироваться" на странице входа
-    FORGOT_PASSWORD_LINK = (By.XPATH, "//a[text()='Восстановить пароль']")  # Ссылка "Восстановить пароль" на странице входа
+    NAME_INPUT = (By.XPATH, "//input[@name='name']")  # Поле ввода "Имя" по атрибуту name
+    EMAIL_INPUT = (By.XPATH, "//input[@type='email']")  # Поле ввода "Email" по атрибуту type
+    PASSWORD_INPUT = (By.XPATH, "//input[@type='password']")  # Поле ввода "Пароль" по атрибуту type
+    REGISTER_BUTTON = (By.XPATH, "//button[text()='Зарегистрироваться']")  # Кнопка "Зарегистрироваться" по тексту
+    LOGIN_LINK = (By.XPATH, "//a[text()='Войти']")  # Ссылка "Войти" по тексту
+    INCORRECT_PASSWORD_ERROR = (By.XPATH, "//p[text()='Некорректный пароль']")  # Сообщение об ошибке по тексту
